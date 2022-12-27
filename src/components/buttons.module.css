@@ -1,0 +1,19 @@
+.buttons-container {
+  display: flex;
+  gap: .5em;
+  margin-top: 2em;
+}
+
+.button {
+  padding: .5em 1em;
+  border: 2px solid var(--secondary-main);
+  border-radius: 3em;
+  background: none;
+  color: var(--secondary-main);
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 2px solid var(--secondary-alternative);
+  color: var(--secondary-alternative);
+}
