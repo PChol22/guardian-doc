@@ -34,7 +34,7 @@ export const Title = () => {
       {letters.map(({ letter, color }, i) => (
         <div className={clsx(styles['letter-container'], lettersOn[i] === true && styles['on'])} key={i}>
           <div className={clsx(styles.letter, styles[color])}>
-            <p><b>{letter}</b></p>
+            <h3>{letter}</h3>
           </div>
         </div>
       ))}

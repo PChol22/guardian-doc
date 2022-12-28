@@ -1,50 +1,46 @@
 import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
 import styles from './index.module.css';
 import { Title } from '../components/title';
 import { Buttons } from '../components/buttons';
+import { Card } from '../components/card';
+import { Contributors } from '../components/contributors';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <main style={{ padding: '3em 5em 0 5em'}}>
+const Home = (): JSX.Element => <Layout
+  title="Homepage"
+  description="Guardian Homepage">
+  <main className={styles.mainContainer}>
+    <section className={styles.mainSection}>
+      <div className={styles.leftSection}>
         <div>
           <Title />
         </div>
         <h1 className={styles.title}>
-          Your open-source serverless infrastructure auditer
+          Open-source serverless infrastructure audit
         </h1>
-        <h2 className={styles.subtitle}>
+        <h3 className={styles.subtitle}>
           Discover and enforce new best practices!
-        </h2>
+        </h3>
         <Buttons />
-      </main>
-    </Layout>
-  );
-}
+      </div>
+      <div className={styles.rightSection}>
+        <img src="img/guardian.svg" />
+      </div>
+    </section>
+    <section>
+      <div className={styles.cardsContainer}>
+        <Card title="Built for AWS" message="We support AWS serverless services such as Lambda, S3, EventBridge and many more!"></Card>
+        <Card title="Framework agnostic" message="Built on AWS sdk. We check your resources online and support every deployment method."></Card>
+        <Card title="Easy to implement" message="Start from the most important, improve your app step-by-step by climbing difficulty levels"></Card>
+        <Card title="Free and open-source" message="We are open to contributions. Feel free to implement new rules and give some feedback!"></Card>
+      </div>
+    </section>
+    <section>
+      <Contributors />
+    </section>
+  </main>
+</Layout>
+
+export default Home;

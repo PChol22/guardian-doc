@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Guardian',
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'http://pchol.fr',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -64,8 +64,7 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            to: 'gettingStarted',
             position: 'right',
             label: 'Quick start',
           },
@@ -88,6 +87,60 @@ const config = {
             
           },
         ],
+      },
+      footer: {
+        style: 'light',
+        logo: {
+          src: '/img/guardian.svg',
+          alt: 'Logo Guardian copyright',
+          height: '40px',
+        },
+        copyright: `Copyright ${new Date().getFullYear()} © Guardian`,
+        links: [
+          {
+            title: 'Contribute ❤️',
+            items: [
+              {
+                label: 'Github',
+                href: 'https://github.com/kumo-by-theodo/guardian'
+              },
+              {
+                label: 'Npm',
+                href: 'https://www.npmjs.com/package/@kumo-by-theodo/guardian'
+              }
+            ]
+          },
+          {
+            title: 'Powered by 🚀',
+            items: [
+              {
+                label: 'Kumo',
+                href: 'https://twitter.com/kumoserverless'
+              },
+              {
+                label: 'Aleios',
+                href: 'https://www.aleios.com/'
+              },
+              {
+                label: 'Theodo',
+                href: 'https://www.theodo.fr/'
+              }
+            ]
+          },
+          {
+            title: 'Our friends 🤝',
+            items: [
+              {
+                label: 'Swarmion',
+                href: 'https://www.swarmion.dev/'
+              },
+              {
+                label: 'Castore',
+                href: 'https://github.com/castore-dev/castore'
+              }
+            ]
+          }
+        ]
       },
       prism: {
         theme: lightCodeTheme,

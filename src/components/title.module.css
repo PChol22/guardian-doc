@@ -10,15 +10,13 @@
   width: 2em;
   height: 2em;
   color: var(--white);
-  box-shadow: 0.1em 0.1em 0.3em var(--shadow-dark);
+  box-shadow: 0.1em 0.1em 0.3em var(--shadow-high-contrast);
   font-weight: 900;
 }
 
-.letter p {
-  transform: translateY(0.4em);
-  line-height: 1em;
+.letter h3 {
+  transform: translateY(0.25em);
   text-align: center;
-  font-size: 1.2em;
   transition: transform 1000ms;
 }
 
@@ -44,7 +42,7 @@
   background: var(--green);
 }
 
-.letter-container.on .letter p {
-  transform: translateY(0.4em) rotateY(-180deg);
+.letter-container.on .letter h3 {
+  transform: translateY(0.25em) rotateY(-180deg);
   transition: transform 1000ms;
 }
